@@ -3,9 +3,8 @@
 /**
  * print_numbers - prints numbers from 0 to 9
  *
- * Return: void
+ * Return: nothing
  */
-
 void print_numbers(void)
 {
 	int n;
@@ -14,6 +13,5 @@ void print_numbers(void)
 	{
 		_putchar(n + '0');
 	}
-
 	_putchar('\n');
 }
