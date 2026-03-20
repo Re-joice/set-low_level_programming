@@ -1,1 +1,3 @@
-echo "# C Recursion" > README.md
+# set-low_level_programming
+
+C recursion tasks
