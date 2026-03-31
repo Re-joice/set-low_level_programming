@@ -1,1 +1,1 @@
-echo "Static library project" > README.md
+echo "0x09. Static libraries project" > README.md
