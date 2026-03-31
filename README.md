@@ -1,1 +1,1 @@
-echo "Static library project in C" > README.md
+echo "Static library project" > README.md
