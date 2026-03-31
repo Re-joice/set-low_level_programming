@@ -1,7 +1,7 @@
 #include "main.h"
 
-int main(void)
+int _strlen(char *s)
 {
-    _puts("Hello\n");
+    (void)s;
     return (0);
 }

@@ -1,7 +1,7 @@
 #include "main.h"
 
-int _putchar(char c)
+int _atoi(char *s)
 {
-    (void)c;
+    (void)s;
     return (0);
 }

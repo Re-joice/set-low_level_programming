@@ -1,6 +1,6 @@
 #include "main.h"
 
-int _putchar(char c)
+int _isalpha(int c)
 {
     (void)c;
     return (0);
