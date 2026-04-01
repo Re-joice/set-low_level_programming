@@ -1,0 +1,18 @@
+# Compiled files
+a.out
+*.out
+
+# Executables
+0-whatsmyname
+test
+mynameis
+newname
+anothername
+AreYouSure?
+
+# Temporary / junk
+*~
+*.swp
+
+# Betty folder (should not be tracked)
+Betty/
