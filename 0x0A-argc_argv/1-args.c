@@ -5,7 +5,7 @@
  * @argc: argument count
  * @argv: argument vector
  *
- * Return: Always 0 (Success)
+ * Return: 0
  */
 int main(int argc, char *argv[])
 {
@@ -15,4 +15,3 @@ int main(int argc, char *argv[])
 
 	return (0);
 }
-/* Task 1 */
