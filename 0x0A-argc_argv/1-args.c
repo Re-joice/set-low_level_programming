@@ -9,8 +9,10 @@
  */
 int main(int argc, char *argv[])
 {
+	/* This line is critical to avoid 'unused variable' errors */
 	(void)argv;
 
 	printf("%d\n", argc - 1);
+
 	return (0);
 }
