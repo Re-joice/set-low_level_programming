@@ -9,7 +9,7 @@
  */
 int main(int argc, char *argv[])
 {
-	(void)argv; /* This is mandatory to pass with -Werror if argv isn't used */
+	(void)argv;
 
 	printf("%d\n", argc - 1);
 
