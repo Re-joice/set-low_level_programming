@@ -11,8 +11,7 @@ int main(int argc, char *argv[])
 {
 	(void)argv;
 
-	/* The checker expects the total count including the program name */
-	printf("%d\n", argc -1 );
+	printf("%d\n", argc - 1);
 
 	return (0);
 }
