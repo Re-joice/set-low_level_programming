@@ -1,6 +1,6 @@
 section .data
 	format db "%s", 0
-	message db "Hello, ALX", 10, 0
+	message db "Hello, Holberton", 10, 0
 
 section .text
 	global main
