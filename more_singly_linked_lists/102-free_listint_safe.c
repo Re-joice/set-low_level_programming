@@ -3,13 +3,12 @@
 
 /**
  * looped_listint_len - counts unique nodes
- * in a looped linked list
- * @head: pointer to the head node
+ * in a looped listint_t list
+ * @head: pointer to the head
  *
  * Return: number of unique nodes
  */
-size_t looped_listint_len(const listint_t *head)
-{
+static size_t looped_listint_len(const listint_t *head){
 	const listint_t *slow, *fast;
 	size_t nodes;
 
@@ -18,12 +17,12 @@ size_t looped_listint_len(const listint_t *head)
 
 	slow = head->next;
 	fast = (head->next)->next;
-	nodes = 1;
 
-	while (fast != NULL && fast->next != NULL)
+	while (fast && fast->next)
 	{
 		if (slow == fast)
 		{
+			nodes = 1;
 			slow = head;
 
 			while (slow != fast)
@@ -53,20 +52,23 @@ size_t looped_listint_len(const listint_t *head)
 
 /**
  * free_listint_safe - frees a listint_t list safely
- * @h: pointer to pointer of the head node
+ * @h: double pointer to head
  *
- * Return: size of the list that was freed
+ * Return: number of nodes freed
  */
 size_t free_listint_safe(listint_t **h)
 {
 	listint_t *temp;
-	size_t nodes, i;
+	size_t nodes, index;
+
+	if (h == NULL || *h == NULL)
+		return (0);
 
 	nodes = looped_listint_len(*h);
 
 	if (nodes == 0)
 	{
-		for (; *h != NULL; nodes++)
+		for (nodes = 0; *h != NULL; nodes++)
 		{
 			temp = (*h)->next;
 			free(*h);
@@ -75,7 +77,7 @@ size_t free_listint_safe(listint_t **h)
 	}
 	else
 	{
-		for (i = 0; i < nodes; i++)
+		for (index = 0; index < nodes; index++)
 		{
 			temp = (*h)->next;
 			free(*h);
@@ -84,8 +86,6 @@ size_t free_listint_safe(listint_t **h)
 
 		*h = NULL;
 	}
-
-	h = NULL;
 
 	return (nodes);
 }
