@@ -4,11 +4,12 @@
 /**
  * looped_listint_len - counts unique nodes
  * in a looped listint_t list
- * @head: pointer to the head
+ * @head: pointer to the head node
  *
  * Return: number of unique nodes
  */
-static size_t looped_listint_len(const listint_t *head){
+static size_t looped_listint_len(const listint_t *head)
+{
 	const listint_t *slow, *fast;
 	size_t nodes;
 
@@ -18,7 +19,7 @@ static size_t looped_listint_len(const listint_t *head){
 	slow = head->next;
 	fast = (head->next)->next;
 
-	while (fast && fast->next)
+	while (fast != NULL && fast->next != NULL)
 	{
 		if (slow == fast)
 		{
@@ -52,7 +53,7 @@ static size_t looped_listint_len(const listint_t *head){
 
 /**
  * free_listint_safe - frees a listint_t list safely
- * @h: double pointer to head
+ * @h: double pointer to the head node
  *
  * Return: number of nodes freed
  */
