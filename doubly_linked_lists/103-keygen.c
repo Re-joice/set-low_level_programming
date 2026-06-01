@@ -1,4 +1,6 @@
-int secret(int x)
+#include <stdio.h>
+
+int main(void)
 {
-    return (x * 2) + 5;
+    return (0);
 }
