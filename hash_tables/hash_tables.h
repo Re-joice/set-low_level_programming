@@ -74,4 +74,10 @@ int hash_table_set(hash_table_t *ht, const char *key,
  */
 char *hash_table_get(const hash_table_t *ht, const char *key);
 
+/**
+ * hash_table_print - prints a hash table
+ * @ht: hash table
+ */
+void hash_table_print(const hash_table_t *ht);
+
 #endif /* HASH_TABLES_H */
